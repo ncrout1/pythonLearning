@@ -1,0 +1,12 @@
+#function should return an integer
+#your task is to compplete this function
+class Solution:
+    def convertFive(self,n):
+        #Code here
+        l=list(str(n))
+        
+        for i in range(len(l)):
+            if (l[i]=='0'):
+                l[i]='5'
+        return int(''.join(l))
+
