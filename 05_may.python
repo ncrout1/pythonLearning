@@ -1,0 +1,9 @@
+class Solution:
+    def nonRepeatingChar(self,s):
+        char_s={}
+        for char in s:
+            char_s[char]=char_s.get(char,0)+1
+        for char in s:
+            if(char_s[char]==1):
+                return char
+        return '$'
