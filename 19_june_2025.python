@@ -1,0 +1,16 @@
+def permute_array(nums,start,result):
+    if(len(nums)==start):
+        result.append(nums[:])
+        return 
+    for i in range(start,len(nums)):
+        swap(nums,start,i)
+        permute_array(nums,start+1,result)
+        swap(nums,start,i)
+def swap(nums,i,j):
+    nums[i],nums[j]=nums[j],nums[i]
+def main():
+    l=[1,2,3,4]
+    result=[]
+    permute_array(l,0,result)
+    print(result)
+main()
