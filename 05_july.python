@@ -1,0 +1,12 @@
+class Solution:
+    def findLucky(self, arr: List[int]) -> int:
+        m=[]
+        newarr=set(arr)
+        result=-1
+        for i in newarr:
+            if(i==arr.count(i)):
+                m.append(i)
+                result=max(m)
+
+        return result
+        
